@@ -7,7 +7,7 @@ from flask_limiter.util import get_remote_address
 import json
 import random
 
-file_path = "./phrdase.json"
+file_path = "./phrase.json"
 
 with open(file_path, 'r', encoding='UTF-8') as file:
     data = json.load(file)
@@ -23,7 +23,9 @@ limiter = Limiter(
 
 class KoreanPhrase(Resource):
     def get(self):
-        return {"phrase": "%s" %data[str(random.randint(1, len(data)))]}
+        num = random.randint(1, (len(data)/2)-1)
+        return {"phrase": "%s" %data["phrase%d" %num], 
+                "writer": "%s" %data["writer%d" %num]}
 
 api.add_resource(KoreanPhrase, '/korean/phrase')
 
