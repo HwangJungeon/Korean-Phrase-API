@@ -5,8 +5,8 @@
 # API 사용방법
 |요청|타입|응답코드|응답
 |------|----|---|---------------|
-|[GET] https://api.jungeon.cc/koream/phrase |JSON|200|{ "phrase": "명언" }|
-|[GET] https://api.jungeon.cc/koream/phrase |JSON|429|{ "Too Many Requests": "50 per minute" }|
+|[GET] https://api.jungeon.cc/korean/phrase |JSON|200|{ "phrase": "명언 내용", "writer": "저자 이름" }|
+|[GET] https://api.jungeon.cc/korean/phrase |JSON|429|{ "Too Many Requests": "50 per minute" }|
 
 # API 사용량
 <b>1분</b> 동안 <b>50번</b> 호출 가능
