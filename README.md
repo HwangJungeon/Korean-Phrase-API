@@ -8,7 +8,7 @@
 |[GET] https://api.jungeon.cc/korean/phrase |JSON|200|{ "phrase": "명언 내용", "writer": "저자 이름" }|
 |[GET] https://api.jungeon.cc/korean/phrase |JSON|429|{ "Too Many Requests": "50 per minute" }|
 
-UTF-8 인코딩 필요
+UTF-8 인코딩 필요<br>
 저자 이름이 없을 시 null값을 반환합니다.
 
 # API 사용량
